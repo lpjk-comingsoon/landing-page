@@ -3,12 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coming Soon - LPJK</title>
+    <title>lspikialki.id</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <style>
       body {
-        background: url("logo.png") no-repeat center center fixed;
-        background-size: cover;
+        background: linear-gradient(
+          135deg,
+          #0a2463 0%,
+          #1e3a8a 60%,
+          #0a2463 100%
+        );
         height: 100vh;
         margin: 0;
         display: flex;
@@ -16,109 +35,158 @@
         justify-content: center;
         align-items: center;
         color: white;
-        position: relative;
         text-align: center;
+        font-family: "Montserrat", sans-serif;
         overflow: hidden;
-      }
-
-      /* Overlay agar teks tetap jelas di semua ukuran */
-      body::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 0;
-      }
-
-      h1,
-      p,
-      #countdown {
         position: relative;
-        z-index: 1;
+        padding: 0 1rem;
       }
 
+      /* COMING SOON + domain */
+      .coming-container {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+      }
+
+      .coming-container h1 {
+        font-size: 3.8rem;
+        font-weight: 900;
+        margin: 0;
+        line-height: 1.1;
+      }
+
+      .coming-container h2 {
+        font-size: 2.7rem;
+        font-weight: 800;
+        color: #facc15;
+        text-transform: lowercase;
+        margin-top: 0.3rem;
+        line-height: 1;
+      }
+
+      /* Countdown */
       #countdown {
-        font-weight: bold;
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 1rem 2rem;
-        border-radius: 1rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1rem 2.5rem;
+        border-radius: 1.2rem;
+        font-weight: 700;
         margin-top: 1rem;
         display: inline-block;
+        font-size: 1.8rem;
+        letter-spacing: 0.05em;
       }
 
-      /* Responsive font scaling */
-      @media (max-width: 640px) {
-        /* HP */
-        h1 {
-          font-size: 1.5rem;
+      p {
+        opacity: 0.9;
+        margin-top: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 2.5rem;
+        margin-top: 2rem;
+        justify-content: center;
+      }
+
+      .social-icons a {
+        color: white;
+        font-size: 2.8rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        color: #facc15;
+        transform: scale(1.15);
+      }
+
+      footer {
+        position: absolute;
+        bottom: 45px;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      /* Bar kuning di bawah */
+      .yellow-bar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 25px;
+        background-color: #facc15;
+      }
+
+      /* Responsif HP */
+      @media (max-width: 768px) {
+        .coming-container h1 {
+          font-size: 2.3rem;
+        }
+        .coming-container h2 {
+          font-size: 1.6rem;
         }
         #countdown {
-          font-size: 1rem;
-          padding: 0.75rem 1.5rem;
+          font-size: 1.1rem;
+          padding: 0.7rem 1.5rem;
         }
-      }
-
-      @media (min-width: 641px) and (max-width: 1024px) {
-        /* Tablet */
-        h1 {
+        p {
+          font-size: 1rem;
+        }
+        .social-icons a {
           font-size: 2rem;
         }
-        #countdown {
-          font-size: 1.25rem;
-        }
-      }
-
-      @media (min-width: 1025px) {
-        /* Laptop dan Desktop */
-        h1 {
-          font-size: 2.5rem;
-        }
-        #countdown {
-          font-size: 1.5rem;
+        .yellow-bar {
+          height: 18px;
         }
       }
     </style>
   </head>
 
   <body>
-    <h1 class="font-bold mb-2">Coming Soon</h1>
-    <h1 class="font-semibold mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl">
-      Lembaga Pengembangan Jasa Konstruksi
-    </h1>
+    <div class="coming-container">
+      <h1>COMING SOON</h1>
+      <h2>lspikialki.id</h2>
+    </div>
 
     <div id="countdown"></div>
 
-    <p class="opacity-90 mt-3 text-sm sm:text-base">
-      Kami akan segera hadir kembali dalam 2 bulan mendatang.
-    </p>
+    <p>Kami akan segera hadir kembali dalam 2 bulan mendatang.</p>
 
-    <p class="text-xs sm:text-sm mt-6 opacity-70">
-      &copy; 2025 LPJK - Kementerian PUPR
-    </p>
+    <div class="social-icons">
+      <a href="https://twitter.com" target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a href="https://facebook.com" target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="https://instagram.com" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </div>
+
+    <footer>&copy; 2025</footer>
+    <div class="yellow-bar"></div>
 
     <script>
-      // Hitung waktu 2 bulan ke depan dari sekarang
       const twoMonthsLater = new Date();
       twoMonthsLater.setMonth(twoMonthsLater.getMonth() + 2);
-
       const countdown = document.getElementById("countdown");
 
       function updateCountdown() {
         const now = new Date().getTime();
         const distance = twoMonthsLater - now;
-
         if (distance <= 0) {
           countdown.innerHTML = "Situs sudah aktif!";
           return;
         }
-
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
         countdown.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
       }
 
